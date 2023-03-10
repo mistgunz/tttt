@@ -6,12 +6,13 @@
 /*   By: rnait-el <rnait-el@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 03:21:55 by rnait-el          #+#    #+#             */
-/*   Updated: 2023/03/10 03:28:59 by rnait-el         ###   ########.fr       */
+/*   Updated: 2023/03/10 03:35:49 by rnait-el         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+#	ifndef LIBFT_H
 # define LIBFT_H
+# define BUFFER_SIZE 1
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -28,9 +29,6 @@ char	*ft_strjoin(char *s1, const char *s2);
 size_t	ft_strlen(const char *s);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-
 char	*ft_readfile_and_pushtostash(int fd, char *stash);
 char	*get_next_line(int fd);
 char	*ft_checkbackn_and_pushtoline(char *stash);
@@ -45,4 +43,4 @@ int		ft_print_unsigned(unsigned int nb);
 int		ft_print_hexa(unsigned int nb, const char format);
 char	*ft_itoa(int n);
 
-# endif
+#endif
